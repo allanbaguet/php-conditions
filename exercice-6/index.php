@@ -71,6 +71,12 @@ $age = 25;
                     } else {
                         echo 'Tu n\'est pas majeur';
                     }
+                    // seconde méthode inversée
+                    // if ($age < 18) {
+                    //     echo 'Tu n\'est pas majeur';
+                    // } else {
+                    //     echo 'Tu es majeur';
+                    // }
                 ?>
             </p>
         </div>

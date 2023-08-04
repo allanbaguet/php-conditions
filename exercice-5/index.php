@@ -1,5 +1,11 @@
 <?php
-$gender = null;
+$gender = false;
+if ($gender != 'Homme') {
+    $result = 'C\'est une développeuse !!!';
+} else {
+    $result = 'C\'est un développeur !!!';
+}
+// utilisation de la ternaire ici que dans un if et un else
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -66,13 +72,7 @@ $gender = null;
     <main>
         <div>
             <p>
-                <?php
-                    if ($gender != 'Homme') {
-                        echo 'C\'est une développeuse !!!';
-                    } else {
-                        echo 'C\'est un développeur !!!';
-                    }
-                ?>
+                <?= $result ?>
             </p>
         </div>
     </main>

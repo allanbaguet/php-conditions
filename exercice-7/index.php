@@ -67,6 +67,8 @@ $isOk = false;
         <div>
             <p>
                 <?php
+                    #c'est un commentaire php
+                    // ça aussi (ctrl + / )
                     if ($isOk == false) {
                         echo 'c\'est pas bon !!!';
                     } else {

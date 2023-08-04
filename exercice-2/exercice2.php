@@ -1,6 +1,18 @@
 <?php
-$isEasy = true;
+$isEasy = false;
+if ($isEasy == true) {
+    $result = 'C\'est facile !!';
+} else {
+    $result = 'C\'est difficile !!!';
+}
 ?>
+<!-- seconde méthode  -->
+<!-- $isEasy = true; -->
+<!-- if ($isEasy) {
+    $result = 'C\'est difficile !!!';
+} else {
+    $result = 'C\'est facile !!';
+} -->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -65,13 +77,7 @@ $isEasy = true;
     <main>
         <div>
             <p>
-                <?php
-                    if ($isEasy) {
-                        echo "C'est facile !!";
-                    } else {
-                        echo "C'est difficile !!!";
-                    }
-                ?>
+                <?= $result ?>
             </p>
         </div>
     </main>

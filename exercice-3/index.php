@@ -1,6 +1,24 @@
 <?php
-$age = 27;
-$gender = 'Homme';
+$age = 25;
+$gender = true;
+// gender true -> Homme / false -> Femme
+if ($age < 0 || $age > 100) {
+    $result = 'Entrez un âge valide';
+} else {
+    if ($gender === true) {
+        if ($age >= 18) {
+            $result = 'Vous êtes un homme et vous êtes majeur';
+        } else {
+            $result = 'Vous êtes un homme et vous êtes mineur';
+        }
+    } elseif ($gender === false) {
+        if ($age >= 18) {
+            $result = 'Vous êtes une femme et vous êtes majeure';
+        } else {
+            $result = 'Vous êtes une femme et vous êtes mineure';
+        }
+    }  
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -75,21 +93,7 @@ $gender = 'Homme';
     <main>
         <div>
             <p>
-                <?php
-                    if ($gender === 'Homme') {
-                        if ($age >= 18) {
-                            echo "Vous êtes un homme et vous êtes majeur";
-                        } else {
-                            echo "Vous êtes un homme et vous êtes mineur";
-                        }
-                    } elseif ($gender === 'Femme') {
-                        if ($age >= 18) {
-                            echo "Vous êtes une femme et vous êtes majeure";
-                        } else {
-                            echo "Vous êtes une femme et vous êtes mineure";
-                        }
-                    }                    
-                ?>
+                <?= $result ?>
             </p>
         </div>
     </main>
